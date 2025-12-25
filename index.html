@@ -1,203 +1,260 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computer Software Store</title>
-  <style>
-    body {
-      font-family: 'Poppins', 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #4f46e5, #9333ea);
-      color: #333;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Software Hub | Shams Hussain</title>
 
-    header {
-      width: 100%;
-      background: rgba(255,255,255,0.15);
-      color: white;
-      text-align: center;
-      padding: 25px 0;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
 
-    h1 {
-      font-size: 2.3em;
-      margin: 0;
-    }
+body{
+  background:linear-gradient(135deg,#7c3aed,#9333ea,#06b6d4);
+  color:#111;
+}
 
-    section {
-      width: 90%;
-      max-width: 950px;
-      margin: 40px auto;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      padding: 30px;
-      text-align: center;
-      background: white;
-    }
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.5);
+  padding:14px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  z-index:1000;
+}
 
-    /* About Section */
-    .about {
-      background: #ffffff;
-    }
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .about img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #4f46e5;
-      box-shadow: 0 0 20px rgba(79,70,229,0.5);
-      margin-bottom: 20px;
-    }
+nav a:hover{
+  color:#00ffcc;
+}
 
-    /* Services Section */
-    .services {
-      background: #eaf3ff; /* light blue shade */
-    }
+/* HEADER */
+header{
+  text-align:center;
+  padding:80px 15px;
+  color:#fff;
+}
 
-    .service-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+header h1{
+  font-size:34px;
+}
 
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      transition: all 0.3s ease;
-    }
+header p{
+  margin-top:10px;
+  font-size:18px;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
+/* SECTION COMMON */
+section{
+  width:92%;
+  max-width:1200px;
+  margin:45px auto;
+  background:#fff;
+  padding:45px 25px;
+  border-radius:28px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
 
-    .card h4 {
-      color: #4f46e5;
-    }
+/* SERVICES STYLE (SCREENSHOT TYPE) */
+.services-box{
+  background:#f5f3ff;
+  padding:40px;
+  border-radius:25px;
+}
 
-    /* Contact Section */
-    .contact {
-      background: #f2e8ff; /* soft lavender/purple */
-    }
+.services-box h2{
+  text-align:center;
+  margin-bottom:35px;
+  color:#111827;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
 
-    input, textarea {
-      padding: 12px 15px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-      font-family: inherit;
-    }
+.service-card{
+  background:#fff;
+  padding:22px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  transition:0.3s;
+}
 
-    button {
-      background: linear-gradient(135deg, #4f46e5, #9333ea);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 12px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background 0.3s;
-    }
+.service-card:hover{
+  transform:translateY(-6px);
+}
 
-    button:hover {
-      background: linear-gradient(135deg, #4338ca, #7e22ce);
-    }
+.service-card h3{
+  font-size:16px;
+  margin-bottom:8px;
+}
 
-    /* WhatsApp Button */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 55px;
-      height: 55px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      text-decoration: none;
-    }
+.service-card p{
+  font-size:14px;
+  color:#374151;
+  line-height:1.5;
+}
 
-    .whatsapp:hover { transform: scale(1.1); }
+/* MAP */
+iframe{
+  width:100%;
+  height:350px;
+  border:0;
+  border-radius:18px;
+  margin-top:20px;
+}
 
-    footer {
-      text-align: center;
-      color: white;
-      padding: 20px;
-      margin-top: 40px;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
-    }
+.map-link{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 20px;
+  background:#16a34a;
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+}
 
-    @media (max-width: 600px) {
-      h1 { font-size: 1.6em; }
-      .about img { width: 120px; height: 120px; }
-    }
-  </style>
+/* FOOTER */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:50px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:55px;
+  height:55px;
+  background:#25D366;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Computer Software Store</h1>
-    <p>Welcome to our professional IT service website</p>
-  </header>
 
-  <section class="about">
-    <img src="1000044463.jpg" alt="Profile Photo">
-    <h2>About Me / मेरे बारे में</h2>
-    <p>
-      हम <b>एप्लिकेशन और वेबसाइट डेवलपमेंट</b>, 
-      <b>सिस्टम इंस्टॉलेशन</b> और 
-      <b>नेटवर्किंग सॉल्यूशन्स</b> जैसी सेवाएं प्रदान करते हैं।  
-      हमारा लक्ष्य ग्राहकों को भरोसेमंद और आधुनिक तकनीकी सहायता देना है।
-    </p>
-  </section>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#location">Location</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section class="services">
+<header id="home">
+  <h1>Computer Software Hub</h1>
+  <p>Professional IT & Software Solutions</p>
+</header>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-box">
     <h2>Our Services / हमारी सेवाएं</h2>
-    <div class="service-cards">
-      <div class="card"><h4>💻 Microsoft Office Installation</h4><p>Office versions की installation और activation services।</p></div>
-      <div class="card"><h4>🪟 Windows Installation</h4><p>Windows 7, 10, 11 setup और troubleshooting solutions।</p></div>
-      <div class="card"><h4>🖥 Windows Server Setup</h4><p>Server installation, domain configuration और maintenance।</p></div>
-      <div class="card"><h4>🐧 Linux Installation</h4><p>Ubuntu, Debian, Red Hat जैसी Linux OS installation services।</p></div>
-      <div class="card"><h4>🌐 Website Development</h4><p>Modern, responsive और SEO optimized websites।</p></div>
-      <div class="card"><h4>📱 Application Development</h4><p>Custom Android और Windows apps development solutions।</p></div>
-      <div class="card"><h4>🌐 Networking Issue</h4><p>LAN, Wi-Fi और IP configuration से जुड़ी समस्याओं का समाधान।</p></div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <h3>💻 Microsoft Office Installation</h3>
+        <p>सभी Office versions की installation और activation services।</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🪟 Windows Installation</h3>
+        <p>Windows 7, 10, 11 setup और troubleshooting solutions।</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🖥️ Windows Server Setup</h3>
+        <p>Server installation, domain configuration और maintenance।</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🐧 Linux Installation</h3>
+        <p>Ubuntu, Debian, Red Hat Linux installation services।</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🌐 Website Development</h3>
+        <p>Modern, responsive और SEO optimized websites।</p>
+      </div>
+
+      <div class="service-card">
+        <h3>📱 Application Development</h3>
+        <p>Custom Android और Windows applications development।</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🖧 Networking Solutions</h3>
+        <p>LAN, Wi-Fi और IP configuration issues का समाधान।</p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="contact">
-    <h2>Contact Form / संपर्क करें</h2>
-    <form>
-      <input type="text" placeholder="आपका नाम / Your Name" required>
-      <input type="email" placeholder="आपका ईमेल / Your Email" required>
-      <textarea rows="4" placeholder="आपका संदेश / Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<!-- LOCATION (ERROR FREE MAP) -->
+<section id="location">
+  <h2 style="text-align:center;">📍 Our Exact Location</h2>
+  <p style="text-align:center;">Near Choti Masjid, Bhikhanpur, Bhagalpur, Bihar</p>
 
-  <a href="https://wa.me/919241566816" target="_blank" class="whatsapp" title="Chat on WhatsApp">💬</a>
+  <iframe
+    src="https://maps.google.com/maps?q=Bhikhanpur%20Bhagalpur%20Bihar&z=15&output=embed">
+  </iframe>
 
-  <footer>
-    © 2025 Computer Software Store. All rights reserved.
-  </footer>
+  <div style="text-align:center;">
+    <a class="map-link"
+       href="https://www.google.com/maps?q=Bhikhanpur+Bhagalpur+Bihar"
+       target="_blank">
+       📍 Open Live Location
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 style="text-align:center;">Contact Us</h2>
+  <p style="text-align:center;">
+    📞 <b>Mobile:</b> 9241566816 <br>
+    👨‍💻 <b>Owner:</b> Shams Hussain
+
+<p>We provide services such as application development, website development,
+  system installation, and networking solutions.
+  Our goal is to deliver reliable, fast, and modern technical support to our customers.</p>
+  </p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919241566816" target="_blank">💬</a>
+
+<footer>
+  <p>© 2025 Computer Software Hub</p>
+  <p>Developed by <b>Shams Hussain</b></p>
+</footer>
+
 </body>
 </html>
+ 
